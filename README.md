@@ -1,7 +1,15 @@
 # Superstore Sales Dashboard in Power BI
 
-##Executive Summary
 The purpose of this project was to analyze the dataset to identify key business metrics, evaluate the profitability of different product categories, compare sales and profit across countries, identify the best- and worst-performing markets, and determine which customer segment generates the highest profit.
+
+## Dataset
+SuperStore Orders
+
+## Tools
+- Power BI
+- Power Query
+- DAX
+- SQL
 
 ## Data Cleaning and Preparation
 Before starting the analysis, I performed data cleaning and preparation using Power Query in Power BI.
