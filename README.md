@@ -12,26 +12,20 @@ SuperStore Orders
 - SQL
 
 ## Data Cleaning and Preparation
-Before starting the analysis, I performed data cleaning and preparation using Power Query in Power BI.
 
-### Steps performed:
+Before building the dashboard, the dataset was cleaned and prepared in **Power Query** to ensure data quality and consistency.
 
-1. **Checked for duplicate records**
-   - Reviewed the dataset for duplicate rows to ensure data accuracy and avoid double counting during analysis.
+The following preprocessing steps were performed:
 
-2. **Handled missing and empty values**
-   - Identified blank cells and missing values in the dataset.
-   - Checked data completeness and prepared the data for further analysis.
+- Checked the dataset for duplicate records.
+- Identified missing and blank values to verify data completeness.
+- Corrected data types by converting numeric fields stored as text into appropriate numeric formats.
+- Standardized the dataset to ensure consistent and reliable analysis.
+- Loaded the transformed data into Power BI using **Close & Apply**.
 
-3. **Changed data types**
-   - Converted columns with numerical information stored as text into numeric data types.
-   - Updated the data type for the following fields:
-     - Profit
-     - Sales
-     - Quantity
-     - Shipping Cost
+### Columns with updated data types
 
-4. **Prepared data for analysis**
-   - Cleaned and transformed the dataset to ensure consistency.
-   - Created a reliable data source for building reports and visualizations in Power BI
-After completing the transformations, the cleaned dataset was loaded into Power BI using **Close & Apply**.
+- Profit
+- Sales
+- Quantity
+- Shipping Cost
