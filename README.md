@@ -30,6 +30,20 @@ The analysis was designed to answer the following questions:
 
 ---
 
+# Skills Demonstrated
+
+This project demonstrates practical experience with:
+
+- Data cleaning
+- Data modeling
+- Business intelligence reporting
+- KPI development
+- DAX calculations
+- Data visualization
+- Exploratory data analysis
+- Business storytelling
+
+---
 # Dataset
 
 **Dataset:** SuperStore Orders
@@ -248,34 +262,7 @@ Features:
 
 - Technology products generate the strongest profits
 - Some products create significant losses and require pricing or inventory review
-
----
-
-# Dashboard Preview
-
-(Add screenshots here)
-
-Example:
-
-![Executive Dashboard](images/executive_dashboard.png)
-
-![Profitability Dashboard](images/profit_dashboard.png)
-
----
-
-# Skills Demonstrated
-
-This project demonstrates practical experience with:
-
-- Data cleaning
-- Data modeling
-- Business intelligence reporting
-- KPI development
-- DAX calculations
-- Data visualization
-- Exploratory data analysis
-- Business storytelling
-
+  
 ---
 
 # Business Recommendations
