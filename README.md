@@ -176,7 +176,7 @@ Filters:
 - Country
 - Category
 
-Screenshots/Page1.png
+![Page 1](Screenshots/Page1.png)
 
 ### Key Insights
 
@@ -200,6 +200,8 @@ Features:
 - Top profitable countries
 - Loss-making countries
 - Sales comparison
+
+![Page 2](Screenshots/Page2.png)
 
 ### Key Insights
 
@@ -227,6 +229,8 @@ Filters:
 - Customer
 - Year
 
+![Page 3](Screenshots/Page3.png)
+
 ### Key Insights
 
 - Total customer base: **795 customers**
@@ -251,6 +255,8 @@ Features:
 - Loss-making products
 - Product profitability ranking
 - Product filters
+  
+![Page 4](Screenshots/Page4.png)
 
 ### Key Insights
 
