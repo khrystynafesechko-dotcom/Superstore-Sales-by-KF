@@ -24,7 +24,6 @@ The analysis was designed to answer the following questions:
 - What are the overall sales and profit performance metrics?
 - Which product categories generate the highest revenue?
 - Which products contribute the most profit?
-- Which markets are the most and least profitable?
 - Which customer segments drive business growth?
 - Are there products or countries causing profitability losses?
 
@@ -176,6 +175,8 @@ Filters:
 - Date
 - Country
 - Category
+
+Screenshots/Page1.png
 
 ### Key Insights
 
