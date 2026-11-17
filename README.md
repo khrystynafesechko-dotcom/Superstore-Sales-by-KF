@@ -176,7 +176,7 @@ Filters:
 - Country
 - Category
 
-![Page 1](Screenshots/Page1.png)
+![Img1](Screenshots/Img1.png)
 
 ### Key Insights
 
