@@ -212,6 +212,12 @@ Features:
 - Top 5 Countries with Lowest Sales per Customer
 - Total Sales by Country (map)
 
+
+Filters:
+
+- Year
+- Category
+
 ![Img2](Screenshots/Img2.png)
 
 ### Key Insights
