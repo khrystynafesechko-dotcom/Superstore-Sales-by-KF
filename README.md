@@ -65,7 +65,7 @@ The dataset contains transactional sales information including:
 
 - Power BI
 - Power Query
-- DAX
+- Advanced DAX
 - SQL
 
 ---
@@ -165,14 +165,16 @@ Features:
   - Total Profit
   - Total Orders
   - Profit Margin
+  - Total Orders
+  - Total Customers
 
 - Monthly sales trend
-- Sales by category
-- Sales by sub-category
+- Sales by Category
+- Sales by Country
 
 Filters:
 
-- Date
+- Year
 - Country
 - Category
 
@@ -180,11 +182,11 @@ Filters:
 
 ### Key Insights
 
-- Total Sales reached **$12.64M**
-- Total Profit reached **$1.47M**
+- Total Sales reached: **$12.64M**
+- Total Profit reached: **$1.47M**
 - Profit Margin: **11.62%**
-- Total Orders reached **25 035**
-- Total Customers reached **795**
+- Total Orders reached: **25 035**
+- Total Customers reached: **795**
 - Technology and Office Supplies generated the largest sales contribution
 - Growth comes from more orders, not more customers: orders nearly doubled between 2011 and 2014 while the customer base stayed flat at about 795. 
 
