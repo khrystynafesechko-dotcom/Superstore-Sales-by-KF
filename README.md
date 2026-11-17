@@ -180,11 +180,14 @@ Filters:
 
 ### Key Insights
 
-- Total sales reached **$7.84M**
-- Total profit reached **$1.47M**
-- Overall profit margin: **18.74%**
+- Total Sales reached **$12.64M**
+- Total Profit reached **$1.47M**
+- Profit Margin: **11.62%**
+- Total Orders reached **25 035**
+- Total Customers reached **795**
 - Technology and Office Supplies generated the largest sales contribution
-- Chairs, Storage, and Phones were among the strongest sub-categories
+- Growth comes from more orders, not more customers: orders nearly doubled between 2011 and 2014 while the customer base stayed flat at about 795. 
+
 
 ---
 
