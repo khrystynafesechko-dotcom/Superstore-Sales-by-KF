@@ -154,7 +154,7 @@ Created custom DAX measures for KPI tracking and business analysis.
 
 # Dashboard Pages
 
-## 1. Executive Overview
+## 1. KPI&Trend
 
 Provides a high-level view of company performance.
 
@@ -193,26 +193,32 @@ Filters:
 
 ---
 
-## 2. Global Sales & Profitability Analysis
+## 2. Country Performance Analysis
 
 Analyzes performance across different countries.
 
 Features:
 
-- Profit distribution by country
-- Highest-profit country KPI
-- Average profit by country
-- Top profitable countries
-- Loss-making countries
-- Sales comparison
+- KPI cards:
+  - Countries Count
+  - AVG Sales per Customer
+  - Loss Countries
+  - Top Profit Country
+  - Profit of Top Country
 
-![Page 2](Screenshots/Page2.png)
+- Top 5 Countries by Total Profit
+- Top 5 Countries by Sales per Customer
+- Top 5 Countries with Lowest Total Profit
+- Top 5 Countries with Lowest Sales per Customer
+
+![Img2](Screenshots/Img2.png)
 
 ### Key Insights
 
-- The United States is the strongest market by sales and profit
-- Several markets generate revenue but negatively impact profitability
-- Country-level analysis reveals significant profitability differences
+- The United States leads on both sales ($2.30M) and profit ($286K).
+- The USA also has the highest sales per customer ($2,897), more than three times the $805 average. 
+- 29 countries are loss-making.
+- The largest absolute losses are Turkey (−$98K), Nigeria (−$81K) and the Netherlands (−$41K), which together outweigh the profit of many mid-sized markets.
 
 ---
 
