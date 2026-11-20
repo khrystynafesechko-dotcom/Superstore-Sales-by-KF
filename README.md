@@ -275,7 +275,7 @@ Features:
 - Product profitability ranking
 - Product filters
   
-![Page 4](Screenshots/Page4.png)
+![Img4](Screenshots/Img4.png)
 
 ### Key Insights
 
