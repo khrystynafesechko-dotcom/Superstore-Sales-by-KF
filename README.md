@@ -119,13 +119,12 @@ Created custom DAX measures for KPI tracking and business analysis.
 
 ## Sales & Profit Metrics
 
-- Total Sales
-- Total Profit
-- Profit Margin
-- Average Sales per Customer
-- Average Profit per Country
-- Average Profit Value
-
+  - Total Sales
+  - Total Profit
+  - Profit YoY
+  - Profit Margin
+  - Sales Trend by Month
+    
 ## Customer Analytics
 
 - Total Customers
@@ -141,8 +140,12 @@ Created custom DAX measures for KPI tracking and business analysis.
 
 ## Geographic Analysis
 
+- Total Countries
+- Sales by Region
 - Top Sales Country
 - Highest Profit Country
+- Bottom 5 Sales Countries & Profit 
+- Global Sales & Profitability Overview (map)
 
 ## Operational Metrics
 
