@@ -203,23 +203,22 @@ Analyzes performance across different countries.
 Features:
 
 - KPI cards:
-  - Countries Count
-  - AVG Sales per Customer
-  - Loss Countries
-  - Top Profit Country
-  - Profit of Top Country
+  - Total Sales
+  - Total Profit
+  - Total Countries
+  - Sales per Customer
+  - Highest Profit Country
 
-- Top 5 Countries by Total Profit
-- Top 5 Countries by Sales per Customer
-- Top 5 Countries with Lowest Total Profit
-- Top 5 Countries with Lowest Sales per Customer
-- Total Sales by Country (map)
 
+- Top 5 Sales Countries & Profit 
+- Bottom 5 Sales Countries & Profit 
+- Global Sales & Profitability Overview (map)
 
 Filters:
 
 - Year
 - Category
+- Country
 
 ![Img2](Screenshots/Img2.png)
 
@@ -227,8 +226,8 @@ Filters:
 
 - The United States leads on both sales ($2.30M) and profit ($286K).
 - The USA also has the highest sales per customer ($2,897), more than three times the $805 average. 
-- 29 countries are loss-making.
 - The largest absolute losses are Turkey (−$98K), Nigeria (−$81K) and the Netherlands (−$41K), which together outweigh the profit of many mid-sized markets.
+- Overall, while the United States remains the main profit driver, the negative performance of several markets may offset gains from profitable countries.
 
 ---
 
