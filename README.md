@@ -163,14 +163,14 @@ Features:
 - KPI cards:
   - Total Sales
   - Total Profit
-  - Total Orders
+  - Profit YoY
   - Profit Margin
   - Total Orders
-  - Total Customers
+  - Unique Customers
 
-- Monthly sales trend
-- Sales by Category
-- Sales by Country
+- Sales Trend by Month
+- Sales by Region
+- Sales&Profit by Category
 
 Filters:
 
@@ -186,10 +186,11 @@ Filters:
 
 - Total Sales reached: **$12.64M**
 - Total Profit reached: **$1.47M**
+- Profit YoY: The highest growth was recorded in 2013 compared to 2012 amounting to **32.9%**
 - Profit Margin: **11.62%**
 - Total Orders reached: **25 035**
-- Total Customers reached: **795**
-- Technology and Office Supplies generated the largest sales contribution
+- Unique Customers reached: **795**
+- Technology and Furniture generated the largest sales contribution
 - Growth comes from more orders, not more customers: orders nearly doubled between 2011 and 2014 while the customer base stayed flat at about 795. 
 
 
