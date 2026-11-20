@@ -270,25 +270,25 @@ Analyzes product-level performance.
 
 Features:
 
-- Best products by profit
-- Loss-making products
-- Product profitability ranking
-- Product filters
+- KPI cards:
+- Unique Products
+- Unique Sub Category
+- Average Discount
+- Best Product
+
+- Profit by Sub Categories
+- Top 5 Products by Sales & Profit
+- Bottom 5 Products by Sales & Profit
   
 ![Img4](Screenshots/Img4.png)
 
 ### Key Insights
 
-- Inventory contains more than **10K products**
-- Best performing product:
-  **Canon imageCLASS 2200 Advanced Copier**
+- The company has 17 Sub Categories and 3,788K unique products.
+- Copiers generate the highest profit, followed by Phones and Bookcases. T
+- The best-performing product is the Canon imageCLASS 2200 Advanced Copier.
+- The Cubify product has the lowest profit (-8879,97$) and also offers the highest discount (53.33%).
 
-- Highest single product profit:
-  **$25.20K**
-
-- Technology products generate the strongest profits
-- Some products create significant losses and require pricing or inventory review
-  
 ---
 
 # Business Recommendations
