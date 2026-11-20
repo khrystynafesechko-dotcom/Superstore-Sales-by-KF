@@ -231,7 +231,7 @@ Filters:
 
 ---
 
-## 3. Customer & Segment Analysis
+## 3. Customer Analysis
 
 Focuses on customer behavior and segment performance.
 
@@ -249,7 +249,7 @@ Filters:
 - Customer
 - Year
 
-![Page 3](Screenshots/Page3.png)
+![Img3](Screenshots/Img3.png)
 
 ### Key Insights
 
