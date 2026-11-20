@@ -178,7 +178,9 @@ Filters:
 - Country
 - Category
 
-![Img1](Screenshots/Img1.png)
+![Img10](Screenshots/Img10.png)
+
+![Img11](Screenshots/Img11.png)
 
 ### Key Insights
 
