@@ -236,12 +236,16 @@ Filters:
 Focuses on customer behavior and segment performance.
 
 Features:
+- KPI cards:
+- Unique Customers
+- Average Sales per Customer
+- Total Orders
+- Average Order Value
 
-- Total customers
-- Average order value
-- Top customers by sales
-- Top customers by profit
-- Segment contribution
+
+- Monthly Trend by Orders
+- Segment Performance
+- Loss Making Customers by Countries
 
 Filters:
 
@@ -253,15 +257,10 @@ Filters:
 
 ### Key Insights
 
-- Total customer base: **795 customers**
-- Top 10 customers contribute **2.20%** of total sales
-- Consumer segment generates the highest share of revenue (**51.79%**)
-- Top customers include:
-  - Tamara Chand
-  - Raymond Buch
-  - Sanjit Chand
-
-- Average order value: **$313.2**
+- The company has 795 Unique Customers in total. Each customer buys in many countries.
+- Consumer segment generates the highest Sales ($6.51M) and Profit ($749.24K), making it the largest contributor to overall performance.
+- Order activity generally increases throughout the year, reaching its peak in December (3,166 orders) and its lowest point in February (1,104 orders).
+- Nigeria has the highest number of loss-making customers (332).
 
 ---
 
