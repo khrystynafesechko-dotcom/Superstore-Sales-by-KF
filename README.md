@@ -298,26 +298,13 @@ Filters:
 
 # Business Recommendations
 
-Based on the analysis:
-
-- Focus on high-margin technology products
-- Review pricing strategies for loss-making products
-- Investigate low-profit countries
-- Develop retention strategies for valuable customers
-- Optimize product portfolio based on profitability
-
----
-
-# Future Improvements
-
-Possible extensions:
-
-- Add sales forecasting
-- Build customer segmentation model
-- Create automated data refresh pipeline
-- Add SQL data extraction layer
-- Include customer lifetime value analysis
-
+**Prioritize Technology and Office Supplies, and fix Furniture profitability** | Technology earns $0.66M profit on $4.74M sales and Office Supplies $0.52M on $3.79M (about 14% margin each), while Furniture earns only $0.29M on $4.11M (about 7%) |
+**Cap discounts on low-profit products** | Four of the five lowest-profit products carry average discounts of 40–53% (for example, Cubify CubeX 3D Printer Double Head Print: −$8.9K at 53.3%), versus 5–15% for the five most profitable products |
+**Review pricing and range in the Tables sub-category** | Tables is the only sub-category with a loss (−$64.1K), while Copiers ($258.6K) and Phones ($216.7K) lead |
+**Investigate low-profit countries** | Turkey (−$98K), Nigeria (−$81K), the Netherlands (−$41K), Honduras (−$29K) and Pakistan (−$22K) have negative profit; review pricing, discounts and logistics costs there |
+**Protect the core markets** | The United States generates $286K profit and the highest sales per customer ($2,897); China, India, the United Kingdom and France follow |
+**Keep the Consumer segment as the volume core** | Consumer is the largest segment ($6.51M sales, $749K profit); Home Office is the smallest but has a slightly higher margin |
+**Plan around seasonality** | Orders peak in December (3,166) and are lowest in February (1,104); align inventory, staffing and promotions |
 ---
 
 # Author
