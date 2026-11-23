@@ -99,6 +99,7 @@ The report uses a star schema optimized for reporting and analysis.
 - `Dim_Geography`: country, state, market, region
 
 Relationships are one-to-many with single-direction filtering. Dimension keys are generated surrogate keys, because the source IDs are not unique: some product IDs map to several product names, and some countries map to several regions.
+
 ---
 
 # DAX Measures
