@@ -27,3 +27,38 @@ SET sales_correct = TRY_CONVERT(
     FLOAT,
     REPLACE(LTRIM(RTRIM(sales)), ',', '.')
 );
+
+
+SELECT *
+FROM dbo.SuperStoreOrders
+WHERE discount LIKE '%,%';
+
+
+ALTER TABLE dbo.SuperStoreOrders
+ALTER COLUMN discount FLOAT NULL;
+
+
+SELECT *
+FROM dbo.SuperStoreOrders
+WHERE profit LIKE '%,%';.
+
+ALTER TABLE dbo.SuperStoreOrders
+ALTER COLUMN profit FLOAT NULL;
+
+
+SELECT *
+FROM dbo.SuperStoreOrders
+WHERE shipping_cost LIKE '%,%';
+
+ALTER TABLE dbo.SuperStoreOrders
+ALTER COLUMN shipping_cost FLOAT NULL;
+
+SELECT [year]
+FROM dbo.SuperStoreOrders
+WHERE [year] IS NOT NULL
+  AND TRY_CONVERT(INT, [year]) IS NULL;
+
+ALTER TABLE dbo.SuperStoreOrders
+ALTER COLUMN [year] INT NULL;
+
+
