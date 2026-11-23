@@ -61,20 +61,80 @@ WHERE [year] IS NOT NULL
 ALTER TABLE dbo.SuperStoreOrders
 ALTER COLUMN [year] INT NULL;
 
-
 SELECT
-    CAST(SUM(sales_correct) AS DECIMAL(10,2)) AS total_sales,
-    CAST(SUM(profit) AS DECIMAL(10,2)) AS total_profit,
+    SUM(TRY_CONVERT(decimal(18,2),
+        REPLACE(sales, ',', ''))) AS Total_Sales,
+
+    SUM(TRY_CONVERT(decimal(18,2),
+        REPLACE(profit, ',', ''))) AS Total_Profit,
 
     CAST(
-        SUM(profit) * 100.0 / NULLIF(SUM(sales_correct), 0)
-        AS DECIMAL(10,2)
-    ) AS profit_margin,
+        SUM(TRY_CONVERT(decimal(18,2),
+            REPLACE(profit, ',', ''))) * 100.0
+        /
+        NULLIF(
+            SUM(TRY_CONVERT(decimal(18,2),
+                REPLACE(sales, ',', ''))), 0
+        )
+        AS decimal(10,2)
+    ) AS Profit_Margin_Percent
 
-    COUNT(DISTINCT order_id) AS orders,
-    COUNT(DISTINCT customer_name) AS customers
+FROM dbo.SuperStoreOrders;
 
 
+Data Cleaning and Validation – SuperStore Orders
+Під час імпорту датасету SuperStore Orders у MS SQL Server було виявлено особливості форматування числових показників Sales, Profit та Shipping Cost.
 
+Частина значень містила коми як роздільники тисяч, а числові колонки були імпортовані у форматі NVARCHAR.
+
+Для забезпечення коректності подальших розрахунків було виконано:
+
+Перевірку кількості завантажених записів.
+Аналіз числових значень, що містили коми.
+Перевірку можливості конвертації текстових значень у числовий формат за допомогою TRY_CONVERT.
+Перевірку коректності агрегованих показників.
+Розрахунок основних KPI у MS SQL Server для подальшого порівняння з результатами Power BI.
+Під час перевірки було підтверджено завантаження 51 290 записів.
+
+Окрему увагу приділено узгодженню форматів даних та логіки розрахунку KPI між SQL Server і Power BI.
+
+KPI Validation: SQL Server vs Power BI
+Після очищення та підготовки даних було виконано порівняння основних бізнес-показників, розрахованих у MS SQL Server та Power BI.
+
+Для перевірки використовувалися такі KPI:
+
+Total Sales – загальна сума продажів.
+Total Profit – загальний прибуток.
+Profit Margin – рентабельність продажів.
+Total Orders / Records – кількість записів.
+Метою перевірки було підтвердження узгодженості результатів між SQL-запитами та DAX-мірами в Power BI.
+
+
+  Структура проєкту SuperStore Orders
+
+Data Import
+
+Завантаження CSV у MS SQL Server.
+
+Data Quality Check
+
+Перевірка 51 290 записів, форматів і пропущених значень.
+
+Data Cleaning
+
+Очищення числових значень та перевірка типів даних.
+
+SQL Analysis
+
+Розрахунок Sales, Profit, Profit Margin та інших KPI.
+
+Power BI Dashboard
+
+Візуалізація бізнес-показників.
+
+Cross-validation
+
+Порівняння результатів SQL та Power BI.
+  
 
 
