@@ -4,16 +4,14 @@
 
 This project focuses on analyzing Superstore sales data to identify key business performance indicators, evaluate profitability, understand customer behavior, and discover opportunities for business optimization.
 
-The dashboard was developed in Power BI to provide an interactive view of:
+The report provides a view of:
 
 - Sales performance
-- Profitability trends
+- Profitability and year-over-year profit change
 - Customer segments
 - Product performance
 - Geographic analysis
-- Loss-making areas
-
-The goal of this project was to transform raw transactional data into actionable business insights.
+- Loss-making areas (countries, products, sub-categories)
 
 ---
 
@@ -22,10 +20,11 @@ The goal of this project was to transform raw transactional data into actionable
 The analysis was designed to answer the following questions:
 
 - What are the overall sales and profit performance metrics?
-- Which product categories generate the highest revenue?
-- Which products contribute the most profit?
+- Which product categories generate the highest sales and the highest profit?
+- Which products and sub-categories contribute the most profit?
 - Which customer segments drive business growth?
-- Are there products or countries causing profitability losses?
+- Which countries and products cause profitability losses?
+- How do discounts relate to weak product profitability?
 
 ---
 
@@ -33,12 +32,13 @@ The analysis was designed to answer the following questions:
 
 This project demonstrates practical experience with:
 
-- Data cleaning
-- Data modeling
+- Data cleaning and data quality troubleshooting
+- Data modeling (star schema)
 - Business intelligence reporting
 - KPI development
 - DAX calculations
-- Data visualization
+- Data visualization and dashboard design
+- Drill-through navigation
 - Exploratory data analysis
 - Business storytelling
 
@@ -47,24 +47,22 @@ This project demonstrates practical experience with:
 
 **Dataset:** SuperStore Orders
 
-The dataset contains transactional sales information including:
+- 51,290 order lines, 2011–2014
+- 25,035 unique order IDs, 795 customers, 147 countries, 3,788 product names, 17 sub-categories
 
-- Orders
-- Customers
-- Products
-- Categories
-- Countries
-- Sales
-- Profit
-- Quantity
-- Shipping information
+Fields include:
 
+- Orders (order ID, order and ship dates, ship mode, order priority)
+- Customers (name, segment)
+- Products (ID, name, category, sub-category)
+- Geography (country, state, market, region)
+- Sales, Profit, Quantity, Discount, Shipping cost
 ---
 
 # Tools & Technologies
 
 - Power BI
-- Power Query
+- Power Query (M)
 - Advanced DAX
 - SQL
 
@@ -72,82 +70,73 @@ The dataset contains transactional sales information including:
 
 # Data Preparation
 
-Data cleaning and transformation were performed using Power Query.
+Data cleaning and transformation were performed in Power Query.
 
-Performed steps:
+- Reviewed the dataset for missing values (none found)
+- Converted incorrect data types and created numeric versions of Sales, Profit, Quantity, Discount and Shipping Cost
+- Converted date columns to the Date type
+- Validated key totals against the source file (sales, profit, orders, customers)
+- Built a staging query (load disabled) and generated dimension tables from it
+- Loaded the transformed tables into Power BI
 
-- Checked dataset for duplicate records
-- Reviewed missing and blank values
-- Converted incorrect data types
-- Standardized numerical fields
-- Prepared clean tables for reporting
-- Loaded transformed data into Power BI
-
-Updated data types:
-
-- Sales
-- Profit
-- Quantity
-- Shipping Cost
+**Data quality issue found and fixed:** Sales values of 1,000 or more were stored as text with a thousands separator (for example `1,648`). The Ukrainian locale read the comma as a decimal separator, so total sales showed **$7.84M instead of the correct $12.64M**, and margins by country were distorted. The fix removes the separator and converts the column with an English (US) locale.
 
 ---
 
 # Data Model
 
-The dashboard uses a structured data model optimized for reporting and analysis.
+The report uses a star schema optimized for reporting and analysis.
 
-Main analytical dimensions:
+**Fact table**
 
-- Date
-- Customer
-- Product
-- Category
-- Geography
+- `SuperStoreOrders`: sales, profit, quantity, discount, shipping cost, order ID, dates, ship mode, order priority and keys to the dimensions
 
-Fact data:
+**Dimensions**
 
-- Orders
-- Sales
-- Profit
-- Quantity
+- `Calendar`: date table (2011–2014)
+- `Dim_Customer`: customer, segment
+- `Dim_Product`: product ID, product name, category, sub-category
+- `Dim_Geography`: country, state, market, region
 
+Relationships are one-to-many with single-direction filtering. Dimension keys are generated surrogate keys, because the source IDs are not unique: some product IDs map to several product names, and some countries map to several regions.
 ---
 
 # DAX Measures
 
-Created custom DAX measures for KPI tracking and business analysis.
+Custom DAX measures were created for KPI tracking and business analysis.
 
-## Sales & Profit Metrics
+### Sales & Profit Metrics
 
-  - Total Sales
-  - Total Profit
-  - Profit YoY
-  - Profit Margin
-  - Sales Trend by Month
-    
-## Customer Analytics
+- Total Sales
+- Total Profit
+- Profit Margin
+- Profit YoY (current year vs previous year, with dynamic label and color)
+
+### Customer Analytics
 
 - Total Customers
+- Avg Sales per Customer
 - Customer Margin
-- Top 10 Customer Sales
+- Loss Customers Count
+- Top 10 Customers Sales
 - Top 10 Customer Share
 
-## Product Analytics
+### Product Analytics
 
 - Best Product
 - Best Product Profit
 - Loss-Making Products Count
+- Avg Discount
 
-## Geographic Analysis
+### Geographic Analysis
 
-- Total Countries
-- Sales by Region
+- Countries Count
+- Loss Countries
 - Top Sales Country
 - Highest Profit Country
-- Bottom 5 Sales Countries & Profit 
-- Global Sales & Profitability Overview (map)
+- Profit of Top Sales Country
 
-## Operational Metrics
+### Operational Metrics
 
 - Total Orders
 - Total Quantity
@@ -276,23 +265,36 @@ Features:
 - KPI cards:
 - Unique Products
 - Unique Sub Category
+- Loss Making Products
 - Average Discount
 - Best Product
 
 - Profit by Sub Categories
 - Top 5 Products by Sales & Profit
 - Bottom 5 Products by Sales & Profit
+
+Filters:
+
+- Country
+- Customer
+- Year
   
 ![Img4](Screenshots/Img4.png)
 
 ### Key Insights
 
 - The company has 17 Sub Categories and 3,788K unique products.
-- Copiers generate the highest profit, followed by Phones and Bookcases. T
+- Copiers generate the highest profit, followed by Phones and Bookcases. 
 - The best-performing product is the Canon imageCLASS 2200 Advanced Copier.
 - The Cubify product has the lowest profit (-8879,97$) and also offers the highest discount (53.33%).
 
 ---
+
+## Notes and Limitations
+
+- Customers in this dataset buy in many countries (about 20 on average), so customer counts by country overlap and do not add up to the 795 total.
+- `order_id` is not unique per order in the source data, so Total Orders counts distinct order IDs.
+- Orders by month are aggregated across all years, so the monthly charts show seasonality rather than a year-over-year trend.
 
 # Business Recommendations
 
