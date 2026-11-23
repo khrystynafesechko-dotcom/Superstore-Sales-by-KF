@@ -1,0 +1,29 @@
+SELECT *
+FROM dbo.SuperStoreOrders
+
+  
+EXEC sp_help 'dbo.SuperStoreOrders';
+
+
+SELECT *
+FROM dbo.SuperStoreOrders
+WHERE sales LIKE '%,%';
+
+
+SELECT DISTINCT sales
+FROM dbo.SuperStoreOrders
+WHERE sales IS NOT NULL
+  AND TRY_CONVERT(
+      FLOAT,
+      REPLACE(LTRIM(RTRIM(sales)), ',', '.')
+  ) IS NULL;
+
+
+ALTER TABLE dbo.SuperStoreOrders
+ADD sales_correct FLOAT NULL;
+
+UPDATE dbo.SuperStoreOrders
+SET sales_correct = TRY_CONVERT(
+    FLOAT,
+    REPLACE(LTRIM(RTRIM(sales)), ',', '.')
+);
