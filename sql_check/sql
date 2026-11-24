@@ -26,6 +26,22 @@ ROUND(AVG(CAST(discount AS float)) * 100, 2) AS avg_discount,
 SUM(quantity) AS total_quantity
 FROM dbo.SuperStoreOrders;
 
+---Sales and profit by segment 
+SELECT segment,
+SUM(TRY_CONVERT(decimal(18,2),
+    REPLACE(sales, ',', ''))) AS Total_Sales,
+SUM(TRY_CONVERT(decimal(18,2),
+    REPLACE(profit, ',', ''))) AS Total_Profit
+FROM dbo.SuperStoreOrders
+GROUP BY segment;
+
+---Sales by category   
+SELECT category,
+       SUM(TRY_CONVERT(decimal(18,2),
+    REPLACE(sales, ',', ''))) AS Total_Sales
+FROM dbo.SuperStoreOrders
+GROUP BY category;
+
 
   
 
