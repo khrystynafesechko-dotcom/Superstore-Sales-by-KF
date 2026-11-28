@@ -1,20 +1,13 @@
 SELECT *
 FROM dbo.SuperStoreOrders
   
-EXEC sp_help 'dbo.SuperStoreOrders';
-
 ---Total_Sales,Total_Profit, Profit_Margin
 SELECT
-    SUM(TRY_CONVERT(decimal(18,2),
-        REPLACE(sales, ',', ''))) AS Total_Sales,
-    SUM(TRY_CONVERT(decimal(18,2),
-        REPLACE(profit, ',', ''))) AS Total_Profit,
-    CAST(SUM(TRY_CONVERT(decimal(18,2),
-            REPLACE(profit, ',', ''))) * 100.0/
-        NULLIF(SUM(TRY_CONVERT(decimal(18,2),
-                REPLACE(sales, ',', ''))), 0) AS decimal(10,2)) AS Profit_Margin
+    SUM(TRY_CONVERT(decimal(18,2), REPLACE(sales, ',', ''))) AS Total_Sales,
+    SUM(TRY_CONVERT(decimal(18,2), REPLACE(profit, ',', ''))) AS Total_Profit,
+    CAST(SUM(TRY_CONVERT(decimal(18,2), REPLACE(profit, ',', ''))) * 100.0/ NULLIF(SUM(TRY_CONVERT(decimal(18,2),
+    REPLACE(sales, ',', ''))), 0) AS decimal(10,2)) AS Profit_Margin
 FROM dbo.SuperStoreOrders;
-
 
 
 ---Total Orders (unique order_id), Unique Customers, Average Order Value, Avg Discount (%), Total Quantity  
